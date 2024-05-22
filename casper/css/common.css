@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* root변수 설정 */
+:root{
+  --mainBgColor:#fff;
+  --mainTxtColor:#222;
+  --mainFont:"Noto Sans KR";
+  --fontSizeBase:12px;
+  --fontSize1: 14px;
+  --fontSize2: 16px;
+  --fontColor:#222;
+  --fontColor2:#fff;
+  --SubColor1:#215499;
+  --SubColor2:#042653;
+  --SubColor3:#2986A7;
+}
+
+/* common.css 헤더&푸터 서식 */
+
+/* 헤더서식/////////////////////////////////////////////////// */
+
+header{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  z-index:100;
+}
+.logo, .gnb, .lnb{
+  width:30%;
+}
+.gnb > ul{
+  width:100%;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+}
+.gnb > ul > li{
+  width:15%;
+  text-align:center;
+}
+.gnb > ul > li > a{
+  color:var(--fontColor2);
+  font-size:var(--fontSize2);
+}
+.lnb{
+  text-align:right;
+}
+.lnb i{
+  color:var(--fontColor2);
+  font-size:24px;
+  cursor:pointer;
+}
+.fa-user{
+  padding-right:20px;
+}
+
+/* 사이드 네비게이션 */
+.side_nav{
+  width:10px;
+  height:100px;
+  position:fixed;
+  right:0;
+  top:40%;
+  z-index:9999;
+}
+.side_nav > ul{
+  position:relative;
+}
+.side_nav > ul > li{
+  width:40px;
+  height:40px;
+  border-radius:30px;
+  background-color: var(--SubColor3);
+  margin-top:10px;
+  transition:.5s;
+  transform:translateX(-100%);
+  overflow:hidden;
+}
+.side_nav > ul > li:hover{
+  width:200px;
+}
+.side_nav > ul > li:hover span{
+  background-color: var(--fontColor);
+}
+.side_nav > ul > li:first-child{
+  margin:0;
+}
+.side_nav > ul > li > span{
+  display:inline-block;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background-color: var(--SubColor1);
+  line-height:40px;
+  color:var(--fontColor2);
+  font-size:var(--fontSize2);
+  cursor:pointer;
+  text-align:center;
+}
+.side_nav > ul > li > a{
+  color:var(--fontColor2);
+  font-size:var(--fontSize2);
+  line-height:40px;
+  padding-left:55px;
+}
+.side_nav > ul > li:nth-child(3) > a{
+  padding-left:50px;
+}
+.side_nav > ul > li:nth-child(5) > a{
+  padding-left:45px;
+}
+
+
+/* 푸터 서식 ///////////////////////////////////////*/
+footer{
+  background-color: var(--fontColor);
+  padding:40px 0;
+  height:100px;
+}
+
+.f_inner{
+  width:1200px;
+  margin:0 auto;
+}
+footer h2{
+  float:left;
+  padding-top:10px;
+  width:150px;
+  height:60px;
+}
+footer h2 img{
+  width:100%;
+}
+.f_lnb, address{
+  float:left;
+}
+.f_lnb a{
+  color:#cfcfcf;
+  padding:0 20px;
+  border-right:1px solid #5e5e5e;
+}
+.f_lnb > ul > li:last-child a{
+  border:none;
+}
+.f_lnb > ul > li:nth-child(2) a{
+  color:var(--fontColor2);
+  font-weight:500;
+}
+.f_lnb > ul{
+  display:flex;
+  padding-top:15px;
+}
+
+address{
+  clear:left;
+  padding-left:170px;
+  line-height:20px;
+  text-transform:uppercase;
+  color:#cfcfcf;
+}
+address dt, address dd{
+  display:inline-block;
+}
